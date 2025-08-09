@@ -24,16 +24,16 @@
                     <p>GOOD DAY SIR! </P>  
                 </div>
                 <div class="colc">
-                    <a href="cashiers.html">
+                    <a href="cashiers.jsp">
                     <div class="card card1">
                         <h5>USERS</h5>
                     </div> </a> 
-                    <a href="customers.html"> 
+                    <a href="customers.jsp"> 
                     <div class="card card2">
                         <h5>CUSTOMERS</h5>
                     </div> </a>
                     <br>
-                    <a href="products.html">
+                    <a href="products.jsp">
                     <div class="card card3">
                         <h5>PRODUCTS</h5>
                     </div> </a>
