@@ -21,6 +21,22 @@
             <a href=""> <input type="submit" value="ADD"> </a>
         </div>
         </div>
+        <table border="1" cellpadding="8">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Price</th>
+    </tr>
+    <c:forEach var="p" items="${products}">
+        <tr>
+            <td>${p.productId}</td>
+            <td>${p.name}</td>
+            <td>${p.description}</td>
+            <td>${p.price}</td>
+        </tr>
+    </c:forEach>
+</table>
     </div>
 </body>
 </html>
