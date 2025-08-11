@@ -18,22 +18,26 @@
         <div class="wrapper">
             <h1 class="h1">PRODUCTS</h1>
         <div class="addbtn">
-            <a href=""> <input type="submit" value="ADD"> </a>
+            <a href="addproduct.jsp"> <input type="submit" value="ADD"> </a>
         </div>
         </div>
-        <table border="1" cellpadding="8">
+        
+         <table border="1" cellpadding="8">
     <tr>
         <th>ID</th>
         <th>Name</th>
-        <th>Description</th>
         <th>Price</th>
+        <th>Quantity</th>
+        <th>Description</th>
     </tr>
-    <c:forEach var="p" items="${products}">
+    <c:forEach var="product1" items="${products}">
         <tr>
-            <td>${p.productId}</td>
-            <td>${p.name}</td>
-            <td>${p.description}</td>
-            <td>${p.price}</td>
+            <td>${product1.id}</td>
+            <td>${product1.name}</td>
+            <td>${product1.price}</td>
+            <td>${product1.quantity}</td>
+            <td>${product1.desc}</td>
+
         </tr>
     </c:forEach>
 </table>

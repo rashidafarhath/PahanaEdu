@@ -3,20 +3,20 @@ package pahana.model;
 public class Product {
 		
 		private int productId;
-		private String name;
-		private double price;
-		private int quantity;
-		private String description;
+		private String productname;
+		private double productprice;
+		private int productquantity;
+		private String productdes;
 		
 		
 		
 		public Product(int productId, String name, double price, int quantity, String description) {
 			
 			this.productId = productId;
-			this.name = name;
-			this.price = price;
-			this.quantity = quantity;
-			this.description = description;
+			this.productname = name;
+			this.productprice = price;
+			this.productquantity = quantity;
+			this.productdes = description;
 			
 		}
 
@@ -24,21 +24,21 @@ public class Product {
 		public Product(int productId, String name, double price, int quantity) {
 			
 			this.productId = productId;
-			this.name = name;
-			this.price = price;
-			this.quantity = quantity;
+			this.productname = name;
+			this.productprice = price;
+			this.productquantity = quantity;
 		}
 
 
 		public Product(int productId, double price) {
 			
 			this.productId = productId;
-			this.price = price;
+			this.productprice = price;
 		}
 		public Product(int productId, int quantity) {
 			
 			this.productId = productId;
-			this.quantity = quantity;
+			this.productquantity = quantity;
 		}
 		
 
@@ -58,40 +58,40 @@ public class Product {
 
 
 		public String getName() {
-			return name;
+			return productname;
 		}
 
 
 		public void setName(String name) {
-			this.name = name;
+			this.productname = name;
 		}
 
 		public double getPrice() {
-			return price;
+			return productprice;
 		}
 
 
 		public void setPrice(double price) 
 		{
-			this.price = price;
+			this.productprice = price;
 		}
-		public double getQuantity() {
-			return quantity;
+		public int getQuantity() {
+			return productquantity;
 		}
 
 
 		public void setQuantity(int quantity) 
 		{
-			this.quantity = quantity;
+			this.productquantity = quantity;
 		}
 		
 		public String getDescription() {
-			return description;
+			return productdes;
 		}
 
 
 		public void setDescription(String description) {
-			this.description = description;
+			this.productdes = description;
 		}
 	}
 

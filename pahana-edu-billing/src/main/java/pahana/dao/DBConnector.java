@@ -32,5 +32,8 @@ public class DBConnector {
 		}
 		return instance;
 	}
+	public Connection getConnection() {
+	    return connection;
+	}
 
 }
