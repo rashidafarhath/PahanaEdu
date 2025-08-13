@@ -41,9 +41,9 @@ public class ProductControllerr extends HttpServlet {
 			productt.addProduct(product1);
 			
 			message = "Product successfully added";
+			request.setAttribute("message", message);
 			RequestDispatcher dispatcher = request.getRequestDispatcher("adminhome.jsp");
 			dispatcher.forward(request, response);
-
 
 	}
 

@@ -73,7 +73,7 @@ public class ProductDao {
 			}
 	    }
 	    
-	    public void deleteCustomer(Product pro) {
+	    public void deleteProduct(Product pro) {
 	    	try {
 				String query ="DELETE from products where productsId = '"+pro.getProductId()+"'";
 				Connection connection = DBConnectionFactory.getConnection();

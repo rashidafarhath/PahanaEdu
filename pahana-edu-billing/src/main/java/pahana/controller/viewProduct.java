@@ -10,9 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.util.ArrayList;
 import pahana.model.Product;
 
-/**
- * Servlet implementation class viewProduct
- */
+
 /*@WebServlet("/viewProduct")*/
 public class viewProduct extends HttpServlet {
 	private static final long serialVersionUID = 1L;

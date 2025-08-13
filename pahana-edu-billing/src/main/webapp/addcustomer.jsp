@@ -20,13 +20,13 @@
             <h1 class="h1index"> ADD CUSTOMER </h1>
             <div class="maininfo">
                 <div class="top">
-                    <!--<form action="login.php" method="POST"> -->
+                    <form method="post" action="CustomerControllerr" > 
                         <input class="text" type="text" name="customername" placeholder="Name" required=""> 
                         <input class="text" type="text" name="customeraddress" placeholder="Address" required=""> 
                         <input class="text" type="text" name="customerphone" placeholder="Phone" required=""> 
                         <input class="text" type="text" name="customerunits" placeholder="Units Consumed" required=""> 
                         <input type="submit" value="ADD CUSTOMER">    
-                    <!--</form>-->
+                    </form>
                 </div>
             </div>
         </div>
