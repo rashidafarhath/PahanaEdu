@@ -52,6 +52,7 @@ nav a.active{
     background-size: cover; 
     padding-right: 5%;
     box-sizing: border-box;
+    background-color: white;
 
 }
 .wrapper {
@@ -101,3 +102,44 @@ nav a.active{
     border: 1px solid #36363666;
     color: black;
   }
+  table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+            box-sizing: border-box;
+            align-content: center;
+        }
+        th, td {
+            padding: 12px 3px;
+            border-bottom: 1px solid #ddd;  
+        }
+        thead{
+        	background-color: #f2f2f2;
+        	width: 100%;
+        }
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+        .btn {
+            padding: 6px 12px;
+            border: none;
+            display: inline-block;
+   			margin: 0 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+           
+            color: white;
+        }
+        .updatebtn {
+            background-color: #007bff;
+        }
+        .updatebtn:hover {
+            background-color: #0069d9;
+        }
+        .deletebtn {
+            background-color: #dc3545;
+        }
+        .deletebtn:hover {
+            background-color: #c82333;
+        }

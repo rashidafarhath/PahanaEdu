@@ -10,8 +10,38 @@
   	<description></description>
   	<servlet-class>pahana.controller.ProductControllerr</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>viewProduct</servlet-name>
+  	<display-name>viewProduct</display-name>
+  	<description></description>
+  	<servlet-class>pahana.controller.viewProduct</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>updateProduct</servlet-name>
+  	<display-name>updateProduct</display-name>
+  	<description></description>
+  	<servlet-class>pahana.controller.updateProduct</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>deleteProduct</servlet-name>
+  	<display-name>deleteProduct</display-name>
+  	<description></description>
+  	<servlet-class>pahana.controller.deleteProduct</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>ProductControllerr</servlet-name>
   	<url-pattern>/ProductControllerr</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>viewProduct</servlet-name>
+  	<url-pattern>/viewProduct</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>updateProduct</servlet-name>
+  	<url-pattern>/updateProduct</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>deleteProduct</servlet-name>
+  	<url-pattern>/deleteProduct</url-pattern>
   </servlet-mapping>
 </web-app>

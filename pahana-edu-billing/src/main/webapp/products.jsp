@@ -1,3 +1,5 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ page isELIgnored="false" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -21,26 +23,48 @@
             <a href="addproduct.jsp"> <input type="submit" value="ADD"> </a>
         </div>
         </div>
-        
-         <table border="1" cellpadding="8">
-    <tr>
-        <th>ID</th>
-        <th>Name</th>
-        <th>Price</th>
-        <th>Quantity</th>
-        <th>Description</th>
-    </tr>
-    <c:forEach var="product1" items="${products}">
-        <tr>
-            <td>${product1.id}</td>
-            <td>${product1.name}</td>
-            <td>${product1.price}</td>
-            <td>${product1.quantity}</td>
-            <td>${product1.desc}</td>
+         
+     <table>
+        <thead>
+           <tr>
+              <th>Product ID</th>
+              <th>Name</th>
+              <th>Price (LKR)</th>
+              <th>Quantity</th>
+              <th>Description</th>
+              <th>Actions</th>
+            </tr>
+        </thead>
+		<tbody>
+		
 
-        </tr>
-    </c:forEach>
-</table>
+		<c:forEach var="p" items="${productList}">
+		<tr>
+			<td>${p.productId}</td>
+			<td>${p.name}</td>
+			<td>${p.price}</td>
+			<td>${p.quantity}</td>
+			<td>${p.description}</td>
+			
+			<td>
+			<form action="updateproduct.jsp" method="post" style="display:inline">
+				<input type="hidden" name="productId" value="${p.productId}">
+				<input type="hidden" name="name" value="${p.name}">
+				<input type="hidden" name="price" value="${p.price}">
+				<input type="hidden" name="quantity" value="${p.quantity}">
+				<input type="hidden" name="description" value="${p.description}">
+				<input type="submit" value="Update" class="btn updatebtn">
+			</form>
+			
+			<form action="deleteProduct" method="post" style="display:inline;">
+				<input type="hidden" name="productId" value="${p.productId}">
+				<button type="submit" class="btn deletebtn">Delete</button>
+			</form>
+			</td>
+		</tr>
+		</c:forEach>
+		</tbody>
+    </table>
     </div>
 </body>
 </html>

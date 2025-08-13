@@ -1,5 +1,6 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ page isELIgnored="false" %>
 <!DOCTYPE html>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
     <title>Pahana Edu Billing</title>
@@ -18,6 +19,9 @@
 
     <div>
         <div class="container">  
+        <c:if test="${not empty message}">
+                <p style="color: ${message.contains('success') ? 'green' : 'red'};">${message}</p>
+            </c:if>
             <div class="row">
                 <div class="col">
                     <h1>PAHANA EDU</h1>
@@ -34,10 +38,14 @@
                         <h5>CUSTOMERS</h5>
                     </div> </a>
                     <br>
-                    <a href="products.jsp">
-                    <div class="card card3">
-                        <h5>PRODUCTS</h5>
-                    </div> </a>
+                    
+                  <form action="viewProduct" method="post" style="display:inline;">
+    				<button type="submit" style="all:unset; cursor:pointer;">
+        			<div class="card card3">
+            		<h5>PRODUCTS</h5>
+        			</div>
+    				</button>
+				  </form>
                     <a href="">
                         <div class="card card4">
                         <h5>BILLING</h5>

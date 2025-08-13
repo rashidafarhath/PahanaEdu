@@ -31,24 +31,57 @@ public class ProductDao {
 	        }
 	    }
 
-	    public List<Product> getAllProducts() throws SQLException {
-	        List<Product> products = new ArrayList<>();
-	        String query = "SELECT * FROM products";
-
+	    public ArrayList<Product> getAllProducts() {
+	    	
+	    	try {ArrayList<Product> listproducts = new ArrayList<Product>();
+	    	String query = "SELECT * FROM products";
+	    	
 	        Connection connection = DBConnectionFactory.getConnection();
 	        Statement statement = connection.createStatement();
 	        ResultSet resultSet = statement.executeQuery(query);
 	        while (resultSet.next()) 
 	        {
-	        	int id = resultSet.getInt("productsId");
-	        	String name = resultSet.getString("productsName");
-	        	double price = resultSet.getDouble("productPrice");
-	        	int quantity = resultSet.getInt("productQuantity");
-	        	String desc = resultSet.getString("productDes");
-	        	products.add(new Product(id, name, price, quantity, desc));
-	        }
+	        	Product pro = new Product();
+	        	pro.setProductId(resultSet.getInt("productsId"));
+	        	pro.setName(resultSet.getString("productsName"));
+	        	pro.setPrice(resultSet.getDouble("productPrice"));
+	        	pro.setQuantity(resultSet.getInt("productQuantity"));
+	        	pro.setDescription(resultSet.getString("productDes"));
 
-	        return products;
+	        	listproducts.add(pro);
+	        	
+	        	
+	        }
+	        return listproducts;
+	    	}
+	    	catch(Exception e) {
+	    		e.printStackTrace();
+	    		return null;
+	    	}
+	    	
+	    }
+	    
+	    
+	    public void updateProduct(Product product) throws SQLException{
+	    	try {
+	    		String query = "UPDATE products SET productsName='"+product.getName()+"',productPrice='"+product.getPrice()+"',productQuantity='"+product.getQuantity()+"',productDes='"+product.getDescription()+"' where productsId='"+product.getProductId()+"' ";
+	    		Connection connection = DBConnectionFactory.getConnection();
+		        Statement statement = connection.createStatement();
+	    		statement.executeUpdate(query);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+	    }
+	    
+	    public void deleteCustomer(Product pro) {
+	    	try {
+				String query ="DELETE from products where productsId = '"+pro.getProductId()+"'";
+				Connection connection = DBConnectionFactory.getConnection();
+		        Statement statement = connection.createStatement();
+	    		statement.executeUpdate(query);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
 	    }
 	}
 

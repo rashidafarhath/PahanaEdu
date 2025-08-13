@@ -30,6 +30,7 @@ public class ProductControllerr extends HttpServlet {
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String message= null;
 			Product product1=new Product();
 			product1.setName(request.getParameter("productname"));
 			product1.setPrice(Double.parseDouble(request.getParameter("productprice")));
@@ -39,6 +40,7 @@ public class ProductControllerr extends HttpServlet {
 			ProductDao productt = new ProductDao();
 			productt.addProduct(product1);
 			
+			message = "Product successfully added";
 			RequestDispatcher dispatcher = request.getRequestDispatcher("adminhome.jsp");
 			dispatcher.forward(request, response);
 
