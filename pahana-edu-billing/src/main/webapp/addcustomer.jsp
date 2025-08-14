@@ -10,6 +10,7 @@
         <nav>
             <ul>
                <!-- <li><a href="index.html">HOME</a></li>-->
+               <!-- navigation should be user billing product -->
                 <li><a href="#contact">HELP</a></li>
             </ul>
         </nav>

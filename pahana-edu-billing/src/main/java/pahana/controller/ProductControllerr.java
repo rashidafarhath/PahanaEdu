@@ -42,7 +42,7 @@ public class ProductControllerr extends HttpServlet {
 			
 			message = "Product successfully added";
 			request.setAttribute("message", message);
-			RequestDispatcher dispatcher = request.getRequestDispatcher("adminhome.jsp");
+			RequestDispatcher dispatcher = request.getRequestDispatcher("viewProduct");
 			dispatcher.forward(request, response);
 
 	}
