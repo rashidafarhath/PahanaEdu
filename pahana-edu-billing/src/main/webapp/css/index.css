@@ -81,7 +81,7 @@ nav a.active{
   
   input[type="text"], input[type="email"], input[type="password"], input[type="phone"] {
     font-size: 0.9em;
-    color: #fff;
+    color: #0097b2;
     font-weight: 100;
     width: 94.5%;
     display: block;
@@ -97,17 +97,21 @@ nav a.active{
     font-family: 'Roboto', sans-serif;
        border-radius: 10px;
   }
+  
+  
    input.email, input.text.repass,input.text {
     margin: 2em 0;
   }
-  
+
   .text:focus, .text:valid {
     box-shadow: none;
     outline: none;
     background-position: 0 0;
  
   }
-  
+  input::placeholder {
+    color: #3c3c3c;
+}
   input[type="submit"] {
     font-size: .9em;
     color: white;
@@ -132,41 +136,4 @@ nav a.active{
     background: #696969;
     border: 1px solid #696969;
   }
-  .acctypeinclass{
-  margin-top: 3px;
-  font-size: 0.9em;
-  color: #fff;
-  font-weight: 100;
-  width: 75.5%;
-  display: inline-block;
-  border: double;
-  padding: 0.8em;
-  border: solid 1px #b96e458b;
-  border-radius: 5px;
-  background-position: -800px 0;
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-color: #b96e458b;
-  color: white;
-  font-family: 'Roboto', sans-serif;
-}
-.acctypeclass{
-  font-size: 0.9em;
-  color: #696969;
-  font-weight: 100;
-  width: 94.5%;
-  display: block;
-  border: none;
-  padding: 0.8em;
-  border: solid 1px rgba(255, 255, 255, 0.37);
-  -webkit-transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
-  transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
-  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 96%, #fff 4%);
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 96%, #fff 4%);
-  background-position: -800px 0;
-  background-size: 100%;
-  background-repeat: no-repeat;
-  color: #696969;
-  font-family: 'Roboto', sans-serif;
-  border-radius: 10px;
-}
+

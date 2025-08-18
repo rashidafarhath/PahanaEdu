@@ -30,6 +30,25 @@ public class UserDao {
  	        }
 	    }
 	
+	
+	public boolean validate(User user) {
+		try {
+			String query = "SELECT * FROM cashiers where cashierUsername='"+user.getCashierUsername()+"' and cashierspassword='"+user.getCashierspassword()+"' ";
+    		
+			Connection connection = DBConnectionFactory.getConnection();
+	         Statement statement = connection.createStatement();
+	         ResultSet resultSet = statement.executeQuery(query);
+	         
+	         if(resultSet.next()) {
+	        	 return true;
+	         }
+	         
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return false;
+	}
 
 	public ArrayList<User> getAllUsers() {
 
