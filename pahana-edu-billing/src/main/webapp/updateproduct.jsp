@@ -25,10 +25,10 @@
                 <div class="top">
                     <form action="updateProduct" method="post"> 
                         <input class="text" type="text" name="productId" value="${param.productId}" readonly>
-                        <input class="text" type="text" name="name" value="${param.name}"> 
-                        <input class="text" type="text" name="price" value="${param.price}"> 
-                        <input class="text" type="text" name="quantity" value="${param.quantity}"> 
-                        <input class="text" type="text" name="description" value="${param.description}"> 
+                        <input class="text" type="text" name="name" value="${param.name}" required=""> 
+                        <input class="text" type="text" name="price" value="${param.price}" required=""> 
+                        <input class="text" type="text" name="quantity" value="${param.quantity}" required=""> 
+                        <input class="text" type="text" name="description" value="${param.description}" required=""> 
                         <input type="submit" value="UPDATE PRODUCT">   
                     </form>
                 </div>

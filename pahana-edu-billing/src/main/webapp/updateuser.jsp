@@ -25,9 +25,9 @@
                 <div class="top">
                     <form action="updateUser" method="post"> 
                         <input class="text" type="text" name="cashierId" value="${param.userId}" readonly>
-                        <input class="text" type="text" name="cashierName" value="${param.name}"> 
-                        <input class="text" type="text" name="cashierUsername" value="${param.username}"> 
-                        <input class="text" type="text" name="cashierPassword" value="${param.password}"> 
+                        <input class="text" type="text" name="cashierName" value="${param.name}" required=""> 
+                        <input class="text" type="text" name="cashierUsername" value="${param.username}" required=""> 
+                        <input class="text" type="text" name="cashierPassword" value="${param.password}" required=""> 
                         <input type="submit" value="UPDATE USER">   
                     </form>
                 </div>

@@ -26,9 +26,9 @@
                 <div class="top">
                     <form action="updateCustomer" method="post"> 
                         <input class="text" type="text" name="customerId" value="${param.customerId}" readonly>
-                        <input class="text" type="text" name="customername" value="${param.customername}"> 
-                        <input class="text" type="text" name="customeraddress" value="${param.customeraddress}"> 
-                        <input class="text" type="text" name="customerphone" value="${param.customerphone}"> 
+                        <input class="text" type="text" name="customername" value="${param.customername}" required=""> 
+                        <input class="text" type="text" name="customeraddress" value="${param.customeraddress}" required=""> 
+                        <input class="text" type="text" name="customerphone" value="${param.customerphone}" required=""> 
                         <input class="text" type="text" name="customerunits" value="${param.customerunits}" readonly> 
                         <input type="submit" value="UPDATE CUSTOMER">   
                         
