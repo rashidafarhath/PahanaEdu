@@ -32,7 +32,7 @@ public class login extends HttpServlet {
 	    String username = request.getParameter("Username");
 	    String password = request.getParameter("password");
 	    
-	    if("admin".equals(username) && "admin123".equals(password)) {
+	    if("admin".equals(username) && "admin009".equals(password)) {
 	        RequestDispatcher dispatcher = request.getRequestDispatcher("adminhome.jsp");
 	        dispatcher.forward(request, response);
 	        return; 
