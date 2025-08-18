@@ -17,13 +17,6 @@
                     <form action="login.php" method="POST">
                         <input class="text" type="text" name="Username" placeholder="Username" required=""> 
                         <input class="text" type="password" name="password" placeholder="Password" required=""> 
-                    <div class="acctypeclass">
-                        <label for="type">Account type</label>
-                        <select name="Type" id="type" class="acctypeinclass" required="">
-                            <option name="o1" value="cust">Manager</option>
-                            <option name="o2" value="admin">Cashier</option>
-                        </select>
-                    </div>
                         <input type="submit" value="SIGN IN">    
                     </form>
                 </div>

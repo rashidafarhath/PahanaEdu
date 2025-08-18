@@ -9,15 +9,16 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import pahana.dao.CustomerDao;
-import pahana.model.Customer;
+import pahana.dao.UserDao;
+import pahana.model.User;
 
 
-//@WebServlet("/viewCustomer")
-public class viewCustomer extends HttpServlet {
+//@WebServlet("/viewUser")
+public class viewUser extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-  
-    public viewCustomer() {
+       
+
+    public viewUser() {
         super();
         
     }
@@ -30,18 +31,12 @@ public class viewCustomer extends HttpServlet {
 
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		CustomerDao custs= new CustomerDao();
-		ArrayList<Customer> customerss = custs.getAllCustomers();
-		request.setAttribute("customerList", customerss);
+		UserDao users= new UserDao();
+		ArrayList<User> userr = users.getAllUsers();
+		request.setAttribute("userList", userr);
 	
-		String message = (String) request.getAttribute("message");
-        if (message != null) {
-            request.setAttribute("message", message);
-        }
-
-        RequestDispatcher dispatcher = request.getRequestDispatcher("customers.jsp");
-        dispatcher.forward(request, response);
-		
+		RequestDispatcher dispacher = request.getRequestDispatcher("cashiers.jsp");
+		dispacher.forward(request, response);
 	}
 
 }

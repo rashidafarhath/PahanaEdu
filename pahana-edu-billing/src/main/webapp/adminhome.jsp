@@ -29,11 +29,13 @@
                     <p>GOOD DAY SIR! </P>  
                 </div>
                 <div class="colc">
-                    <a href="cashiers.jsp">
+                <form action="viewUser" method="post" style="display:inline;">
+                    <button type="submit" style="all:unset; cursor:pointer;" >
                     <div class="card card1">
                         <h5>USERS</h5>
-                    </div> </a> 
-                    
+                    </div>
+                    </button> 
+                    </form>
                     
                     <form action="viewCustomer" method="post" style="display:inline;">
     				<button type="submit" style="all:unset; cursor:pointer;"> 

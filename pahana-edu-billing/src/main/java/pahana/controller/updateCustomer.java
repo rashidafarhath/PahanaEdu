@@ -67,7 +67,7 @@ public class updateCustomer extends HttpServlet {
 	        CustomerDao dao = new CustomerDao();
 	        dao.updateCustomer(cus); 
 
-	        
+	        request.setAttribute("successMessage", "Customer updated successfully!");
 	        RequestDispatcher dispatcher = request.getRequestDispatcher("viewCustomer");
 	        dispatcher.forward(request, response);
 	    } catch (NumberFormatException e) {

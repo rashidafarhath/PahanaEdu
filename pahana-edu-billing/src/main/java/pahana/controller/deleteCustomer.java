@@ -38,6 +38,7 @@ public class deleteCustomer extends HttpServlet {
 		CustomerDao dao = new CustomerDao();
 		dao.deleteCustomer(cus);
 		
+        request.setAttribute("successMessage", "Customer deleted successfully!");
 		RequestDispatcher dispatcher = request.getRequestDispatcher("viewCustomer");
 		dispatcher.forward(request, response);
 	}

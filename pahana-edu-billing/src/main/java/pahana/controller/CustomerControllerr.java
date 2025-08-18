@@ -41,8 +41,8 @@ public class CustomerControllerr extends HttpServlet {
 		CustomerDao custt = new CustomerDao();
 		custt.addCustomer(cust1);
 		
-		message = "Product successfully added";
-		request.setAttribute("message", message);
+        request.setAttribute("successMessage", "Customer added successfully!");
+		
 		RequestDispatcher dispatcher = request.getRequestDispatcher("viewCustomer");
 		dispatcher.forward(request, response);
 	}

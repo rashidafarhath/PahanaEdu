@@ -8,16 +8,16 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import pahana.dao.ProductDao;
-import pahana.model.Product;
+import pahana.dao.UserDao;
+import pahana.model.User;
 
 
-/*@WebServlet("/deleteProduct")*/
-public class deleteProduct extends HttpServlet {
+//@WebServlet("/deleteUser")
+public class deleteUser extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-  
-    public deleteProduct() {
+ 
+    public deleteUser() {
         super();
         
     }
@@ -28,16 +28,17 @@ public class deleteProduct extends HttpServlet {
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
-	
+
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		Product prod = new Product();
-		prod.setProductId(Integer.parseInt(request.getParameter("productId")));
 		
-		ProductDao dao = new ProductDao();
-		dao.deleteProduct(prod);
+		User user = new User();
+		user.setCashierId(Integer.parseInt(request.getParameter("cashierId")));
 		
-		request.setAttribute("successMessage", "Product deleted successfully!");
-		RequestDispatcher dispatcher = request.getRequestDispatcher("viewProduct");
+		UserDao dao = new UserDao();
+		dao.deleteUser(user);
+		
+        request.setAttribute("successMessage", "User deleted successfully!");
+		RequestDispatcher dispatcher = request.getRequestDispatcher("viewUser");
 		dispatcher.forward(request, response);
 	}
 

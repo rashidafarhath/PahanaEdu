@@ -20,12 +20,14 @@
             <h1 class="h1index"> ADD PRODUCT </h1>
             <div class="maininfo">
                 <div class="top">
-                    <form method="post" action="ProductControllerr" > 
+                    <form method="post" action="ProductControllerr" onsubmit="return validateForm()"> 
                         <input class="text" type="text" name="productname" placeholder="Name" required=""> 
                         <input class="text" type="text" name="productprice" placeholder="Price" required=""> 
                         <input class="text" type="text" name="productquantity" placeholder="Quantity" required=""> 
                         <input class="text" type="text" name="productdes" placeholder="Description"> 
-                        <input type="submit" value="ADD PRODUCT">    
+                        <input type="submit" value="ADD PRODUCT">   
+                        
+                                           
                     </form>
                 </div>
             </div>

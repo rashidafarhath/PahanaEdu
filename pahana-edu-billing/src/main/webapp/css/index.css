@@ -47,7 +47,7 @@ nav a.active{
 .container{
     width: 100%; 
     height: 100vh;
-    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url(../Images/coverpage.png);
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url(../Images/coverimg2.png);
     background-position: center;
     background-size: cover; 
     padding-right: 5%;

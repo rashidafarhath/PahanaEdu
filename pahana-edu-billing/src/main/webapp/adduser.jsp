@@ -20,20 +20,30 @@
             <h1 class="h1index"> ADD USER </h1>
             <div class="maininfo">
                 <div class="top">
-                    <!--<form action="login.php" method="POST"> -->
-                        <input class="text" type="text" name="name" placeholder="Name" required=""> 
-                        <input class="text" type="text" name="username" placeholder="Username" required=""> 
-                        <input class="text" type="password" name="password" placeholder="Password" required=""> 
-                        <input class="text" type="password" name="reenterpass" placeholder="Re-enter Password" required=""> 
-                    <div class="acctypeclass">
-                        <label for="type">Account type</label>
-                        <select name="Type" id="type" class="acctypeinclass" required="">
-                            <option name="o1" value="cust">Manager</option>
-                            <option name="o2" value="admin">Cashier</option>
-                        </select>
-                    </div>
-                    <input type="submit" value="ADD USER">    
-                    <!--</form>-->
+                    <% if (request.getAttribute("error") != null) { %>
+                        <p style="color: red; text-align: center;"><%= request.getAttribute("error") %></p>
+                    <% } %>
+                    <% if (request.getAttribute("success") != null) { %>
+                        <p style="color: green; text-align: center;"><%= request.getAttribute("success") %></p>
+                    <% } %>
+                    <form method="post" action="UserController" onsubmit="return validateForm()">
+                        <input class="text" type="text" name="cashierName" placeholder="Name" required>
+                        <input class="text" type="text" name="username" placeholder="Username" required>
+                        <input class="text" type="password" id="password" name="password" placeholder="Password" required>
+                        <input class="text" type="password" id="confirmPassword" name="confirmPassword" placeholder="Re-enter Password" required>
+                        <input type="submit" value="ADD USER">
+                    </form>
+                    <script>
+                        function validateForm() {
+                            const password = document.getElementById("password").value;
+                            const confirmPassword = document.getElementById("confirmPassword").value;
+                            if (password !== confirmPassword) {
+                                alert("Passwords do not match!");
+                                return false;
+                            }
+                            return true;
+                        }
+                    </script>
                 </div>
             </div>
         </div>

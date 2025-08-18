@@ -40,10 +40,11 @@ public class ProductControllerr extends HttpServlet {
 			ProductDao productt = new ProductDao();
 			productt.addProduct(product1);
 			
-			message = "Product successfully added";
-			request.setAttribute("message", message);
+			request.setAttribute("successMessage", "Product added successfully!");
 			RequestDispatcher dispatcher = request.getRequestDispatcher("viewProduct");
 			dispatcher.forward(request, response);
+			//RequestDispatcher dispatcher = request.getRequestDispatcher("viewProduct");
+			//dispatcher.forward(request, response);
 
 	}
 

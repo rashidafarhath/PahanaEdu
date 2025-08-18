@@ -52,6 +52,30 @@
   	<description></description>
   	<servlet-class>pahana.controller.deleteCustomer</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>updateUser</servlet-name>
+  	<display-name>updateUser</display-name>
+  	<description></description>
+  	<servlet-class>pahana.controller.updateUser</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>viewUser</servlet-name>
+  	<display-name>viewUser</display-name>
+  	<description></description>
+  	<servlet-class>pahana.controller.viewUser</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>UserController</servlet-name>
+  	<display-name>UserController</display-name>
+  	<description></description>
+  	<servlet-class>pahana.controller.UserController</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>deleteUser</servlet-name>
+  	<display-name>deleteUser</display-name>
+  	<description></description>
+  	<servlet-class>pahana.controller.deleteUser</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>ProductControllerr</servlet-name>
   	<url-pattern>/ProductControllerr</url-pattern>
@@ -83,5 +107,21 @@
   <servlet-mapping>
   	<servlet-name>deleteCustomer</servlet-name>
   	<url-pattern>/deleteCustomer</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>updateUser</servlet-name>
+  	<url-pattern>/updateUser</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>viewUser</servlet-name>
+  	<url-pattern>/viewUser</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>UserController</servlet-name>
+  	<url-pattern>/UserController</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>deleteUser</servlet-name>
+  	<url-pattern>/deleteUser</url-pattern>
   </servlet-mapping>
 </web-app>

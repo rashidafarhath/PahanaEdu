@@ -24,14 +24,24 @@
                 <p>GOOD DAY SIR! </P>  
                 </div>
                 <div class="colc">
-                    <a href="customers.jsp"> 
+                    
+                    <form action="viewCustomer" method="post" style="display:inline;">
+    				<button type="submit" style="all:unset; cursor:pointer;"> 
                     <div class="card card2">
                         <h5>CUSTOMERS</h5>
-                    </div> </a>
-                    <a href="products.jsp">
-                    <div class="card card3">
-                        <h5>PRODUCTS</h5>
-                    </div> </a>
+                    </div> 
+                    </button>
+				    </form>
+                   
+                    
+                    
+                    <form action="viewProduct" method="post" style="display:inline;">
+    				<button type="submit" style="all:unset; cursor:pointer;">
+        			<div class="card card3">
+            		<h5>PRODUCTS</h5>
+        			</div>
+    				</button>
+				    </form>
                     <a href="">
                         <div class="card card4">
                         <h5>BILLING</h5>

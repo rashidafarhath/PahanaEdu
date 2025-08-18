@@ -23,7 +23,16 @@
             <a href="addproduct.jsp"> <input type="submit" value="ADD"> </a>
         </div>
         </div>
-         
+		<% 
+		    String successMessage = (String) request.getAttribute("successMessage");
+		    if (successMessage != null) { 
+		%>
+		    <script>
+		        alert("<%= successMessage %>");
+		    </script>
+		<% 
+		    } 
+		%>
      <table>
         <thead>
            <tr>

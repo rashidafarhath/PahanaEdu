@@ -69,7 +69,8 @@ public class updateProduct extends HttpServlet {
 	        ProductDao dao = new ProductDao();
 	        dao.updateProduct(pro); 
 
-	        
+	        request.setAttribute("successMessage", "Product updated successfully!");
+
 	        RequestDispatcher dispatcher = request.getRequestDispatcher("viewProduct");
 	        dispatcher.forward(request, response);
 	    } catch (NumberFormatException e) {
