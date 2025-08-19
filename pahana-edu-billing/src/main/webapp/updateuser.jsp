@@ -12,7 +12,6 @@
         <img src="Images/logo.png" class="logo">
         <nav>
             <ul>
-               <!-- <li><a href="index.html">HOME</a></li>-->
                 <li><a href="#contact">HELP</a></li>
             </ul>
         </nav>

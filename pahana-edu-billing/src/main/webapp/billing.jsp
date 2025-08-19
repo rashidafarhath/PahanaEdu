@@ -7,12 +7,12 @@
 <body>
     <div class="navigationbar">
         <img src="Images/logo.png" class="logo">
-        <!--<nav>
+        <nav>
             <ul>
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="#contact">HELP</a></li>
+
+                <li><a href="help.jsp">HELP</a></li>
             </ul>
-        </nav>-->
+        </nav>
     </div>
 
 <div class="container">

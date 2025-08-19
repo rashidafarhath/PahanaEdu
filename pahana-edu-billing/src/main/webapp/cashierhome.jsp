@@ -10,7 +10,7 @@
         <nav>
             <ul>
                 <!--<li><a href="index.html">HOME</a></li>-->
-                <li><a href="#contact">HELP</a></li>
+                <li><a href="help.jsp">HELP</a></li>
             </ul>
         </nav>
     </div>
@@ -32,8 +32,6 @@
                     </div> 
                     </button>
 				    </form>
-                   
-                    
                     
                     <form action="viewProduct" method="post" style="display:inline;">
     				<button type="submit" style="all:unset; cursor:pointer;">

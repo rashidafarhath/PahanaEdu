@@ -13,7 +13,7 @@ public class UserDao {
 	
 	public static boolean addUser(User user) throws SQLException {
         String query = "INSERT INTO cashiers (cashierName, cashierUsername, cashierspassword) VALUES (?, ?, ?)";
-        //boolean isSuccess = false;
+        
 
         try {Connection connection = DBConnectionFactory.getConnection();
              PreparedStatement statement = connection.prepareStatement(query); {
@@ -60,7 +60,7 @@ public class UserDao {
 	         Statement statement = connection.createStatement();
 	         ResultSet resultSet = statement.executeQuery(query);
 
-	        //System.out.println("Connected to DB: " + connection.getMetaData().getURL());
+	       
 
 	        while (resultSet.next()) {
 	            User user = new User();
@@ -69,9 +69,7 @@ public class UserDao {
 	            user.setCashierUsername(resultSet.getString("cashierUsername"));
 	            user.setCashierspassword(resultSet.getString("cashierspassword"));
 
-	            /*System.out.println("Fetched User: " 
-	                + user.getCashierId() + " | " 
-	                + user.getCashierName());*/
+	            
 
 	            userlist.add(user);
 	        }
@@ -81,7 +79,7 @@ public class UserDao {
 	        e.printStackTrace();
 	        return null;
 	    }}
-	      // always return, even if empty
+	     
 	
 
     

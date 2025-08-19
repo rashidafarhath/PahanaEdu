@@ -43,9 +43,6 @@ public class login extends HttpServlet {
 	    user.setCashierspassword(password);
 	    
 		
-		//user.setCashierUsername(request.getParameter("Username"));
-		//user.setCashierspassword(request.getParameter("password"));
-		
 		UserDao userr = new UserDao();
 		boolean status = userr.validate(user);
 		

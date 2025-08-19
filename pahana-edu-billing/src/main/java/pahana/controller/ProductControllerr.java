@@ -3,7 +3,6 @@ import pahana.dao.ProductDao;
 import pahana.model.Product;
 import javax.servlet.annotation.WebServlet;
 import java.io.IOException;
-
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -12,9 +11,6 @@ import javax.servlet.http.HttpServletResponse;
 import java.sql.SQLException;
 import java.util.List;
 
-/**
- * Servlet implementation class ProductControllerr
- */
 
 public class ProductControllerr extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -43,8 +39,6 @@ public class ProductControllerr extends HttpServlet {
 			request.setAttribute("successMessage", "Product added successfully!");
 			RequestDispatcher dispatcher = request.getRequestDispatcher("viewProduct");
 			dispatcher.forward(request, response);
-			//RequestDispatcher dispatcher = request.getRequestDispatcher("viewProduct");
-			//dispatcher.forward(request, response);
 
 	}
 

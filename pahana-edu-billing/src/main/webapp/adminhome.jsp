@@ -11,8 +11,8 @@
         <img src="Images/logo.png" class="logo">
         <nav>
             <ul>
-                <!--<li><a href="index.html">HOME</a></li>-->
-                <li><a href="#contact">HELP</a></li>
+                
+                <li><a href="help.jsp">HELP</a></li>
             </ul>
         </nav>
     </div>
@@ -56,10 +56,11 @@
 				    </form>
                     
                     
-                    <a href="">
+                    <form action="" method="post" style="display:inline;">
+                    <button type="submit" style="all:unset; cursor:pointer;">
                         <div class="card card4">
                         <h5>BILLING</h5>
-                    </div>  </a>
+                    </div>  </button></form>
                 </div>
             </div>
         </div>

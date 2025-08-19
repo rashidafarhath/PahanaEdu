@@ -40,15 +40,12 @@ public class UserController extends HttpServlet {
         String password = request.getParameter("password");
         String confirmPassword = request.getParameter("confirmPassword");
 
-        // Check if passwords match
         if (!password.equals(confirmPassword)) {
             request.setAttribute("error", "Passwords do not match!");
             request.getRequestDispatcher("adduser.jsp").forward(request, response);
             return;
         }
 
-        
-        // Create user object
         User user = new User();
         user.setCashierName(cashierName.trim());
         user.setCashierUsername(username.trim());
@@ -59,7 +56,6 @@ public class UserController extends HttpServlet {
 		try {
 			user1.addUser(user);
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 			request.setAttribute("successMessage", "Errr! Something went wrong");
 		}
@@ -67,26 +63,6 @@ public class UserController extends HttpServlet {
         request.setAttribute("successMessage", "User added successfully!");
 		RequestDispatcher dispatcher = request.getRequestDispatcher("viewUser");
 		dispatcher.forward(request, response);
-        /*try {
-            // Attempt to register user
-            boolean isRegistered = UserDao.addUser(user); // Fixed: Use instance
-            if (isRegistered) 
-            {
-                request.setAttribute("success", "Registration successful! Please login.");
-                request.getRequestDispatcher("viewUser").forward(request, response);
-            } else {
-                request.setAttribute("error", "Registration failed. Username may already exist.");
-                request.getRequestDispatcher("adduser.jsp").forward(request, response);
-            }
-        } catch (SQLException e) {
-            if (e.getErrorCode() == 1062) { // MySQL duplicate entry
-                request.setAttribute("error", "Username already exists. Please choose a different username.");
-            } else {
-                request.setAttribute("error", "Database error occurred. Please try again.");
-                e.printStackTrace();
-            }
-            request.getRequestDispatcher("adduser.jsp").forward(request, response);
-        }*/
     }
 	}
 
