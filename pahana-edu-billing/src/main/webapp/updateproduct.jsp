@@ -27,7 +27,7 @@
                         <input class="text" type="text" name="productId" value="${param.productId}" readonly>
                         <input class="text" type="text" name="name" value="${param.name}" required=""> 
                         <input class="text" type="text" name="price" value="${param.price}" required=""> 
-                        <input class="text" type="text" name="quantity" value="${param.quantity}" required=""> 
+                        <input class="text" type="text" name="quantity" value="${param.quantity}" readonly> 
                         <input class="text" type="text" name="description" value="${param.description}" required=""> 
                         <input type="submit" value="UPDATE PRODUCT">   
                     </form>

@@ -3,9 +3,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Pahana Edu Billing</title>
-<link rel="stylesheet" type="text/css" href="css/help.css" media="all">
+    <title>Pahana Edu Billing</title>
+    <link rel="stylesheet" type="text/css" href="css/help.css" media="all">
 </head>
 <body>
     <div class="navigationbar">
@@ -20,50 +19,73 @@
             <p>Confused? It's okay we got you! </P>  
             <div class="helpimg">
                  <div class="colc">
+
+
                     <div class="cardgrid">
-                    <div class="card card1">  
+                    <div class="card card11">  
                     </div> 
-                    <P>   Click on the page you want</P>
+                    <P>Click on the page you want</P>
                     </div> 
+                    <div class="cardgrid">
+                    <div class="card card0001">
+                    </div> 
+                    <P>In user page select the function. Clicking "Delete" deletes the data</P>
+                    </div>
+
+                    <br>
+
+                    <div class="cardgrid">
+                    <div class="card card001">    
+                    </div> 
+                    <P>Enter valid credentials and click "Add User" to add new user</P>
+                    </div>
+                    <div class="cardgrid">
+                    <div class="card card01">    
+                    </div> 
+                    <P>Enter valid credentials and click "Update User" to update <br>existing user. You cannot edit Id</P>
+                    </div>
+
+                    <br>
+
                     <div class="cardgrid">
                     <div class="card card2">
                     </div> 
                     <P>In customer page select the function. Clicking "Delete" deletes the data</P>
                     </div>
-
-                    <br>
-
                     <div class="cardgrid">
                     <div class="card card3">
                     </div> 
                     <P>Enter valid credentials and click "Add Customer" to add new customer</P>
                     </div>
+
+                    <br>
+
                     <div class="cardgrid">
                     <div class="card card4">    
                     </div> 
                     <P>Enter valid credentials and click "Update Customer" to update <br>existing customer. You cannot edit consumed units</P>
                     </div>
-                    
-                    <br>
-                    
                     <div class="cardgrid">
                     <div class="card card5">    
                     </div> 
                     <P>In products page select the function. Clicking "Delete" deletes the data</P>
                     </div>
+
+                    <br>
+
                     <div class="cardgrid">
                     <div class="card card6">
                     </div> 
                     <P>Enter valid credentials and click "Add Product" to add new product</P>
                     </div>
-
-                    <br>
-
                     <div class="cardgrid">
                     <div class="card card7">
                     </div> 
                     <P>Enter valid credentials and click "Update Product" to update <br>existing product. You cannot edit Id and quantity</P>
                     </div>
+
+                    <br>
+
                     <div class="cardgrid">
                     <div class="card card8">    
                     </div> 
