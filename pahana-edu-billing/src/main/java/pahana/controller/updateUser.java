@@ -20,7 +20,7 @@ public class updateUser extends HttpServlet {
        
     public updateUser() {
         super();
-        // TODO Auto-generated constructor stub
+       
     }
 
 

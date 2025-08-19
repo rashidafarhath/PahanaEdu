@@ -33,6 +33,7 @@
 		<% 
 		    } 
 		%>
+		
      <table>
         <thead>
            <tr>

@@ -56,11 +56,10 @@
 				    </form>
                     
                     
-                    <form action="" method="post" style="display:inline;">
-                    <button type="submit" style="all:unset; cursor:pointer;">
+                    <a href="billing.jsp">
                         <div class="card card4">
                         <h5>BILLING</h5>
-                    </div>  </button></form>
+                    </div>  </a>
                 </div>
             </div>
         </div>

@@ -16,7 +16,7 @@ import pahana.model.User;
 
 //@WebServlet("/UserController")
 public class UserController extends HttpServlet {
-	//public UserDao userDao;
+	
 	private static final long serialVersionUID = 1L;
 	
 	

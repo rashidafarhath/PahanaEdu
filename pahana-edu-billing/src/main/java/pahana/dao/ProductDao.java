@@ -83,6 +83,42 @@ public class ProductDao {
 				e.printStackTrace();
 			}
 	    }
+	    
+	    public List<Product> searchByName(String query) {
+	        List<Product> products = new ArrayList<>();
+	        String sql = "SELECT * FROM products WHERE productsName LIKE ? AND productQuantity > 0";
+	        try {Connection conn = DBConnectionFactory.getConnection();
+	             PreparedStatement pstmt = conn.prepareStatement(sql);
+	            pstmt.setString(1, "%" + query + "%");
+	            ResultSet rs = pstmt.executeQuery();
+	            while (rs.next()) {
+	                Product p = new Product(
+	                        rs.getInt("productsId"),
+	                        rs.getString("productsName"),
+	                        rs.getDouble("productPrice"),
+	                        rs.getInt("productQuantity"),
+	                        rs.getString("productDes")
+	                );
+	                products.add(p);
+	            }
+	        } catch (SQLException e) {
+	            e.printStackTrace();
+	        }
+	        return products;
+	    }
+
+	    
+	    public void updateQuantity(int id, int deduct) {
+	        String sql = "UPDATE products SET productQuantity = productQuantity - ? WHERE productsId = ?";
+	        try {Connection conn = DBConnectionFactory.getConnection();
+	             PreparedStatement pstmt = conn.prepareStatement(sql);
+	            pstmt.setInt(1, deduct);
+	            pstmt.setInt(2, id);
+	            pstmt.executeUpdate();
+	        } catch (SQLException e) {
+	            e.printStackTrace();
+	        }
+	    }
 	}
 
 

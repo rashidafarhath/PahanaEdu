@@ -9,7 +9,7 @@
         <img src="Images/logo.png" class="logo">
         <nav>
             <ul>
-                <!--<li><a href="index.html">HOME</a></li>-->
+               
                 <li><a href="help.jsp">HELP</a></li>
             </ul>
         </nav>
@@ -40,7 +40,7 @@
         			</div>
     				</button>
 				    </form>
-                    <a href="">
+                    <a href="billing.jsp">
                         <div class="card card4">
                         <h5>BILLING</h5>
                     </div>  </a>

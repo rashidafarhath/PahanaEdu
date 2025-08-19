@@ -86,4 +86,38 @@ public class CustomerDao {
 		}
     }
     
+        public Customer getByTel(int tel) throws SQLException{
+            Customer customer = null;
+            String sql = "SELECT * FROM customers WHERE customerTel = ?";
+            try {Connection conn = DBConnectionFactory.getConnection();
+                 PreparedStatement pstmt = conn.prepareStatement(sql) ;
+                pstmt.setInt(1, tel);
+                ResultSet rs = pstmt.executeQuery();
+                if (rs.next()) {
+                    customer = new Customer(
+                            rs.getInt("customersNo"),
+                            rs.getString("customersName"),
+                            rs.getString("customersAddress"),
+                            rs.getInt("customerTel"),
+                            rs.getInt("customersunits")
+                    );
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+            return customer;
+        }
+
+        
+        public void updateUnits(int tel, int addUnits) throws SQLException {
+            String sql = "UPDATE customers SET customersunits = customersunits + ? WHERE customerTel = ?";
+            try {Connection conn = DBConnectionFactory.getConnection();
+                 PreparedStatement pstmt = conn.prepareStatement(sql);
+                pstmt.setInt(1, addUnits);
+                pstmt.setInt(2, tel);
+                pstmt.executeUpdate();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
 }
